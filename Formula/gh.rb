@@ -1,8 +1,8 @@
 class Gh < Formula
   desc "GitHub command-line tool"
   homepage "https://github.com/cli/cli"
-  url "https://github.com/cli/cli/archive/v1.9.1.tar.gz"
-  sha256 "5fd35b156a0528ad4e8b68c7058fccf340cca08b0cabd36d872ab855476fb02e"
+  url "https://github.com/cli/cli/archive/v1.9.2.tar.gz"
+  sha256 "a1d5a326c9311f8d208a0e5b5ba47023c3982494063e34ea10da916f9b8ba5c3"
   license "MIT"
 
   head "https://github.com/cli/cli.git", branch: "trunk"

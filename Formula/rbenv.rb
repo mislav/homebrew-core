@@ -1,8 +1,8 @@
 class Rbenv < Formula
   desc "Ruby version manager"
   homepage "https://github.com/rbenv/rbenv#readme"
-  url "https://github.com/rbenv/rbenv/archive/v1.1.2.tar.gz"
-  sha256 "80ad89ffe04c0b481503bd375f05c212bbc7d44ef5f5e649e0acdf25eba86736"
+  url "https://github.com/rbenv/rbenv/archive/v1.2.0.tar.gz"
+  sha256 "3f3a31b8a73c174e3e877ccc1ea453d966b4d810a2aadcd4d8c460bc9ec85e0c"
   license "MIT"
   head "https://github.com/rbenv/rbenv.git", branch: "master"
 
@@ -25,8 +25,6 @@ class Rbenv < Formula
       s.gsub! '"${BASH_SOURCE%/*}"/../libexec', libexec
       s.gsub! ":/usr/local/etc/rbenv.d", ":#{HOMEBREW_PREFIX}/etc/rbenv.d\\0" if HOMEBREW_PREFIX.to_s != "/usr/local"
     end
-
-    inreplace "libexec/rbenv-rehash", "$(command -v rbenv)", opt_bin/"rbenv"
 
     # Compile optional bash extension.
     system "src/configure"
